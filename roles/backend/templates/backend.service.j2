@@ -1,3 +1,4 @@
+
 [Unit]
 Description=Backend service
 
@@ -5,11 +6,11 @@ Description=Backend service
 User=expense
 Environment=DB_HOST={{ MYSQL_HOST }}
 Environment=DB_NAME=transactions
-MYSQL_USER: root
-LOGIN_PASSWORD: gwRW2t8TQ4JM$l):W)ew]OKm0Hl~
+Environment=DB_USER=root
+Environment=DB_PASSWORD='gwRW2t8TQ4JM$l):W)ew]OKm0Hl~'
+
 ExecStart=/bin/node /app/index.js
 SyslogIdentifier=backend
-
 
 [Install]
 WantedBy=multi-user.target
